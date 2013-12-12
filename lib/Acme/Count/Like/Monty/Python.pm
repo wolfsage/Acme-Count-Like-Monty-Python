@@ -39,7 +39,6 @@ Output:
 =head1 DESCRIPTION
 
 This module ignores the existence of the numbers '3' and '4' when iterating.
-=head2 EXPORT
 
 =head1 AUTHOR
 
