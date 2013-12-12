@@ -4,14 +4,14 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     NAME              => 'Acme::Count::Like::Monty::Python',
-    VERSION_FROM      => 'lib/Acme/Count/Like/Monty/Python.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    ABSTRACT          => "Count like Monty Python when iterating",
+    VERSION_FROM      => 'lib/Acme/Count/Like/Monty/Python.pm',
+    BUILD_REQUIRES => {
+      "Test::More" => "0.88"
+    },
+    test => {
+      TESTS => "t/*.t",
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'lib/Acme/Count/Like/Monty/Python.pm', # retrieve abstract from module
-       AUTHOR         => 'Matthew Horsfall <mhorsfall@>') : ()),
-    LIBS              => [''], # e.g., '-lm'
-    DEFINE            => '', # e.g., '-DHAVE_SOMETHING'
-    INC               => '-I.', # e.g., '-I. -I/usr/include/other'
-	# Un-comment this if you add C files to link with later:
-    # OBJECT            => '$(O_FILES)', # link all the C files too
+       (AUTHOR         => 'Matthew Horsfall <wolfsage@gmail.com>') : ()),
 );
